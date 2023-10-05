@@ -1,0 +1,55 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int main() 
+{
+    srand(time(0));  
+
+    int opcion;
+
+    while (1) 
+	{  
+
+        opcion = rand() % 6;  
+
+        int num = rand() % 11; 
+        int num1 = rand() % 11; 
+
+        switch (opcion) 
+		{
+            case 1:	
+                printf("%d + %d = %d\n\n", num, num1, num + num1);
+                break;
+                
+            case 2:
+                printf("%d - %d = %d\n\n", num, num1, num - num1);
+                break;
+                
+            case 3:
+                printf("%d * %d = %d\n\n", num, num1, num * num1);
+                break;
+                
+            case 4:
+                printf("%d / %d = ", num, num1);
+                if (num1 != 0) 
+				{
+                    printf("%.2f\n\n", (double)num / num1);
+                } 
+				else 
+				{
+                    printf("No se puede dividir por 0.\n\n");
+                }
+                break;
+            
+        }
+
+        if (opcion == 5) 
+		{
+            printf("Programa terminado.\n\n");
+            break;  
+        }
+    }
+
+    return 0;
+}
