@@ -2,8 +2,7 @@
 
 int main() 
 {
-    int valor1, valor2, valor3;
-
+    int valor1, valor2, valor3,x;
    
     printf("Introduce el valor para v1: ");
     scanf("%d", &valor1);
@@ -12,6 +11,10 @@ int main()
     printf("Introduce el valor para v3: ");
     scanf("%d", &valor3);
 
+	x=valor3;
+	valor3=valor2;
+	valor2=valor1;
+	valor1=x;
     
     printf("Valores intercambiados:\n");
     printf("v1: %d\n", valor3);
